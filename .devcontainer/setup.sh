@@ -1,6 +1,10 @@
 #!/bin/sh
 
-apk add --no-cache --virtual .build-deps \
+export DEBIAN_FRONTEND=noninteractive
+
+apt-get update
+
+apt-get install -y \
     clang \
     clangd \
     autoconf \
@@ -10,6 +14,5 @@ apk add --no-cache --virtual .build-deps \
     flex \
     g++ \
     libx11-dev \
-    libxaw-dev \
     libtool \
     make
