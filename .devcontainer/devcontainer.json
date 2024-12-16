@@ -1,0 +1,33 @@
+{
+    "name": "ngspice",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    // "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
+    "image": "alpine:3.21",
+    // "build": {
+    //     // Path is relative to the devcontainer.json file.
+    //     "dockerfile": "Dockerfile"
+    // },
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh:0": {}
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "clangd.path": "/usr/bin/clangd"
+            },
+            "extensions": [
+                "llvm-vs-code-extensions.vscode-clangd"
+            ],
+        }
+    },
+    // // "forwardPorts": [3000],
+    // "portsAttributes": {
+    //     "3000": {
+    //         "label": "Hello Remote World",
+    //         "onAutoForward": "notify"
+    //     }
+    // },
+    "postCreateCommand": "./.devcontainer/setup.sh"
+    // // "remoteUser": "root"
+}
