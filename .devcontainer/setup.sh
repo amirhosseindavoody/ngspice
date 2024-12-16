@@ -14,5 +14,7 @@ apt-get install -y \
     flex \
     g++ \
     libx11-dev \
+    libxaw7-dev \
     libtool \
+    libreadline-dev \
     make
