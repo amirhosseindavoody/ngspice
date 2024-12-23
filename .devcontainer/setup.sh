@@ -18,3 +18,6 @@ apt-get install -y \
     libtool \
     libreadline-dev \
     make
+
+apt-get install -y \
+    just

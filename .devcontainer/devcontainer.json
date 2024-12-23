@@ -3,10 +3,6 @@
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     // "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
     "image": "ubuntu:latest",
-    // "build": {
-    //     // Path is relative to the devcontainer.json file.
-    //     "dockerfile": "Dockerfile"
-    // },
     // Features to add to the dev container. More info: https://containers.dev/features.
     "features": {
         "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
@@ -17,17 +13,11 @@
                 "clangd.path": "/usr/bin/clangd"
             },
             "extensions": [
-                "llvm-vs-code-extensions.vscode-clangd"
+                "llvm-vs-code-extensions.vscode-clangd",
+                "nefrob.vscode-just-syntax"
             ]
         }
     },
-    // // "forwardPorts": [3000],
-    // "portsAttributes": {
-    //     "3000": {
-    //         "label": "Hello Remote World",
-    //         "onAutoForward": "notify"
-    //     }
-    // },
     "postCreateCommand": "./.devcontainer/setup.sh"
     // // "remoteUser": "root"
 }
