@@ -10,7 +10,8 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "clangd.path": "/usr/bin/clangd"
+                "clangd.path": "/usr/bin/clangd",
+                "workbench.editor.pinnedTabsOnSeparateRow": true
             },
             "extensions": [
                 "llvm-vs-code-extensions.vscode-clangd",
