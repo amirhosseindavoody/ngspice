@@ -5,3 +5,8 @@ compile:
 
 clean:
     git clean -X -f -d
+
+cmake-compile:
+    mkdir build
+    cd build && cmake ..
+    cd build && make
