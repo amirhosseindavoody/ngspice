@@ -7,6 +7,6 @@ clean:
     git clean -X -f -d
 
 cmake-compile:
-    mkdir build
+    mkdir -p build
     cd build && cmake ..
     cd build && make
