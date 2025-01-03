@@ -5,20 +5,25 @@
     "image": "ubuntu:latest",
     // Features to add to the dev container. More info: https://containers.dev/features.
     "features": {
-        "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
+        // "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
     },
     "customizations": {
         "vscode": {
-            "settings": {
-                "clangd.path": "/usr/bin/clangd",
-                "workbench.editor.pinnedTabsOnSeparateRow": true
-            },
             "extensions": [
                 "llvm-vs-code-extensions.vscode-clangd",
-                "nefrob.vscode-just-syntax"
-            ]
+                "nefrob.vscode-just-syntax",
+                "josetr.cmake-language-support-vscode"
+            ],
+            "settings": {
+                "workbench.editor.pinnedTabsOnSeparateRow": true,
+                "clangd.path": "/usr/bin/clangd",
+                "dotnetAcquisitionExtension.existingDotnetPath": [
+                    "/usr/bin/dotnet"
+                ],
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            }
         }
     },
-    "postCreateCommand": "./.devcontainer/setup.sh"
-    // // "remoteUser": "root"
+    "postCreateCommand": "./.devcontainer/setup.sh",
+    // "remoteUser": "root"
 }
