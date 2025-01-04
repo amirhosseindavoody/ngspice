@@ -78,14 +78,14 @@ Makefile.in
 
 # Visual Studio user options files
 **/*.vcxproj.user
-.vscode/
 
 src/frontend/parse-bison.c
 src/frontend/parse-bison.h
 src/spicelib/parser/inpptree-parser.c
 src/spicelib/parser/inpptree-parser.h
-# Visual Studio Code user options files
-.vscode/
+
+# # Visual Studio Code user options files
+# .vscode/
 
 test_cases/diode/__pycache__/*
 test_cases/diode/test_osdi/*

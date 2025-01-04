@@ -8,15 +8,7 @@ configure: clean
 make-make: configure
     make > make.log
 
-
-
 only-cmake-make:
-    rm -rf build
-    mkdir -p build
-    cd build && cmake -GNinja ..
-    cd build && ninja
-
-only-cmake-make2:
     rm -rf build
     mkdir -p build
     cd build && cmake -S .. --preset clang 
