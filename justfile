@@ -1,19 +1,25 @@
-configure:
+clean:
+    git clean -X -f -d
+
+configure: clean
     ./autogen.sh > autogen.log
     ./configure > config.log
 
 make-make: configure
     make > make.log
 
-clean:
-    git clean -X -f -d
 
-cmake-make: configure
-    mkdir -p build
-    cd build && cmake ..
-    cd build && make
 
 only-cmake-make:
+    rm -rf build
     mkdir -p build
-    cd build && cmake ..
-    cd build && make
+    cd build && cmake -GNinja ..
+    cd build && ninja
+
+only-cmake-make2:
+    rm -rf build
+    mkdir -p build
+    cd build && cmake -S .. --preset clang 
+    cmake --build ./build
+
+cmake-make: configure only-cmake-make    

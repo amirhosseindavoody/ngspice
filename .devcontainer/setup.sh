@@ -18,7 +18,8 @@ apt-get install -y \
     libtool \
     libreadline-dev \
     make \
-    cmake
+    cmake \
+    ninja-build
 
 
 
