@@ -12,7 +12,7 @@
             "extensions": [
                 "llvm-vs-code-extensions.vscode-clangd",
                 "nefrob.vscode-just-syntax",
-                "josetr.cmake-language-support-vscode"
+                "ms-vscode.cmake-tools"
             ],
             "settings": {
                 "workbench.editor.pinnedTabsOnSeparateRow": true,
