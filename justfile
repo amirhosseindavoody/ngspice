@@ -11,7 +11,7 @@ make-make: configure
 only-cmake-make:
     rm -rf build
     mkdir -p build
-    cd build && cmake -S .. --preset clang 
+    cmake -S . -B ./build --preset clang
     cmake --build ./build
 
 cmake-make: configure only-cmake-make    
