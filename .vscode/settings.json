@@ -4,5 +4,6 @@
         "--background-index",
         "--clang-tidy",
         "--fallback-style=Google",
-    ]
+    ],
+    "editor.inlayHints.enabled": "off",
 }
