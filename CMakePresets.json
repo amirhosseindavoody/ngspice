@@ -5,19 +5,32 @@
             "name": "gcc",
             "hidden": false,
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "gcc",
-                "CMAKE_CXX_COMPILER": "g++"
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_BUILD_TYPE": "Debug"
             }
         },
         {
             "name": "clang",
             "hidden": false,
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "clang",
-                "CMAKE_CXX_COMPILER": "clang++"
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_BUILD_TYPE": "Debug"
             }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "clang",
+            "displayName": "Clang Build",
+            "configurePreset": "clang",
+            "jobs": 4,
+            "cleanFirst": false
         }
     ]
 }
