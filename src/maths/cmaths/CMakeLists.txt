@@ -1,3 +1,5 @@
+include_directories(${CMAKE_CURRENT_LIST_DIR}/../poly)
+
 # Collect all source files in this subfolder
 file(GLOB SOURCES "*.c")
 
