@@ -8,10 +8,11 @@ configure: clean
 make-make: configure
     make > make.log
 
-only-cmake-make:
+clean-build:
     rm -rf build
-    mkdir -p build
+
+only-cmake-make:
     cmake --preset clang
     cmake --build --preset clang
 
-cmake-make: configure only-cmake-make    
+cmake-make: configure clean-build only-cmake-make    

@@ -7,7 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# # Include directories for header files
+# Include the helper functions from the cmake directory
+include(cmake/HelperFunctions.cmake)
+
+# Include directories for header files
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 
 # Add subdirectories for each module
