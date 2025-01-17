@@ -4,9 +4,6 @@
         "dockerfile": "Dockerfile"
     },
     // Features to add to the dev container. More info: https://containers.dev/features.
-    "features": {
-        // "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
-    },
     "customizations": {
         "vscode": {
             "extensions": [
@@ -28,7 +25,5 @@
                 "editor.inlayHints.enabled": "off"
             }
         }
-    },
-    // "postCreateCommand": "./.devcontainer/setup.sh",
-    // "remoteUser": "root"
+    }
 }
