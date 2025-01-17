@@ -1,10 +1,8 @@
-#!/bin/sh
+FROM ubuntu:latest
 
-export DEBIAN_FRONTEND=noninteractive
-
-apt-get update
-
-apt-get install -y \
+RUN apt-get update \
+    && \
+    apt-get install -y \
     git \
     clang \
     clangd \
@@ -19,8 +17,8 @@ apt-get install -y \
     libreadline-dev \
     make \
     cmake \
-    ninja-build
-
-
-
-
+    ninja-build \
+    && \
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get clean && \
+    apt-get autoremove
