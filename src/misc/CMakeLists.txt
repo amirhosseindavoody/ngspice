@@ -1,7 +1,7 @@
-include_directories(${CMAKE_CURRENT_LIST_DIR}/../poly)
-
 # Collect all source files in this subfolder
 file(GLOB SOURCES "*.c")
 
 # Create a library or executable (adjust as necessary)
-add_library(cmaths_lib ${SOURCES})
+add_library(misc_lib ${SOURCES})
+
+target_link_libraries(misc_lib PRIVATE frontend_lib)

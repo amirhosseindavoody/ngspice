@@ -15,3 +15,5 @@ glob_files_with_exclusions("*.c" ${EXCLUDE_FILES} SOURCES)
 add_library(frontend_lib ${SOURCES})
 target_link_libraries(frontend_lib PRIVATE 
     frontend_help_lib frontend_numparam_lib frontend_parser_lib frontend_plotting_lib frontend_trannoise_lib frontend_wdisp_lib)
+
+target_link_libraries(frontend_lib PRIVATE misc_lib)
