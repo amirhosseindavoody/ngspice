@@ -24,3 +24,24 @@ function(add_subdir_library lib_name)
 
     set(${lib_name} "${full_lib_name}" PARENT_SCOPE)
 endfunction()
+
+
+# Define a function to glob files based on a pattern, excluding specified ones
+function(glob_files_with_exclusions glob_pattern exclude_files output_var)
+    # Glob all files matching the given pattern in the source directory
+    file(GLOB ALL_FILES "${glob_pattern}")
+
+    # Create a list to hold the filtered files
+    set(FILTERED_FILES)
+
+    # Loop through all found files and exclude specified ones
+    foreach(FILE ${ALL_FILES})
+        get_filename_component(FILENAME ${FILE} NAME)
+        if(NOT FILENAME IN_LIST exclude_files)
+            list(APPEND FILTERED_FILES ${FILE})
+        endif()
+    endforeach()
+
+    # Set the output variable with filtered file list
+    set(${output_var} ${FILTERED_FILES} PARENT_SCOPE)
+endfunction()
