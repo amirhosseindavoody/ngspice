@@ -16,3 +16,12 @@ only-cmake-make:
     cmake --build --preset clang
 
 cmake-make: configure clean-build only-cmake-make    
+
+gcc-make: clean-build
+    cmake --preset gcc
+    cmake --build --preset gcc
+
+clang-make: clean-build
+    cmake --preset clang
+    cmake --build --preset clang
+    ./build/src/ngspice_main

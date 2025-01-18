@@ -15,8 +15,12 @@ function(add_subdir_library lib_name)
     # Collect all source files in this subfolder
     file(GLOB SOURCES "*.c")
 
-    set(${lib_name} ${current_folder_name}_lib)
+    set(full_lib_name "${current_folder_name}_lib")
 
     # Create a library or executable (adjust as necessary)
-    add_library(${lib_name} ${SOURCES})
+    add_library(${full_lib_name} ${SOURCES})
+
+    message("Added library: ${full_lib_name}")
+
+    set(${lib_name} "${full_lib_name}" PARENT_SCOPE)
 endfunction()

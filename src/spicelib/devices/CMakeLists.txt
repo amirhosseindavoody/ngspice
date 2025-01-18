@@ -56,12 +56,6 @@ add_subdirectory(vcvs)
 add_subdirectory(vdmos)
 add_subdirectory(vsrc)
 
-# Use the helper function to get the current directory name
-get_current_directory_name(current_folder_name)
-
-# Print the current folder name (for debugging)
-message("Current folder name: ${current_folder_name}")
-
 # Collect all source files in this subfolder
 file(GLOB SOURCES "*.c")
 

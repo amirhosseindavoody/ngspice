@@ -22,7 +22,8 @@
                     "--clang-tidy",
                     "--fallback-style=Google"
                 ],
-                "editor.inlayHints.enabled": "off"
+                "editor.inlayHints.enabled": "off",
+                "editor.formatOnSave": false
             }
         }
     }

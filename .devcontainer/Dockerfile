@@ -15,6 +15,7 @@ RUN apt-get update \
     libxaw7-dev \
     libtool \
     libreadline-dev \
+    libomp-dev \
     make \
     cmake \
     ninja-build \
