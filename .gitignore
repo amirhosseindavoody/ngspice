@@ -93,3 +93,4 @@ test_cases/diode/test_built_in/*
 
 build/
 autogen.log
+make.log
