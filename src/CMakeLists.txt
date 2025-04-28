@@ -1,14 +1,8 @@
 # # Collect all source files in the src directory and its subfolders
 add_subdirectory(maths)
-# add_subdirectory(spicelib)
+add_subdirectory(spicelib)
 add_subdirectory(frontend)
 add_subdirectory(misc)
-
-# # Collect all source files in this subfolder
-# file(GLOB SOURCES "*.c")
-
-# # add_library(nghelp_lib STATIC nghelp.c)
-# # target_include_directories(nghelp_lib PRIVATE ${CMAKE_CURRENT_LIST_DIR}/misc)
 
 # Create a library or executable (adjust as necessary)
 add_executable(ngspice_main main2.c conf.c ngspice.c winmain.c hist_info.c)
@@ -35,3 +29,5 @@ target_link_libraries(frontend_lib PUBLIC cmaths_lib)
 target_link_libraries(ngspice_main PUBLIC frontend_lib)
 target_link_libraries(ngspice_main PUBLIC misc_lib)
 target_link_libraries(ngspice_main PUBLIC cmaths_lib)
+target_link_libraries(ngspice_main PUBLIC devices_lib)
+target_link_libraries(ngspice_main PUBLIC analysis_lib)
