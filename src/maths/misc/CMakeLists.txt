@@ -2,6 +2,4 @@
 file(GLOB SOURCES "*.c")
 
 # Create a library or executable (adjust as necessary)
-add_library(misc ${SOURCES})
-
-target_link_libraries(misc PRIVATE frontend_lib)
+add_library(maths_misc ${SOURCES})

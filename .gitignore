@@ -95,3 +95,4 @@ build/
 autogen.log
 make.log
 .cache/
+cmake.log

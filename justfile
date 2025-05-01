@@ -1,6 +1,9 @@
 clean:
     git clean -X -f -d
 
+format:
+    find . -name 'CMakeLists.txt' | xargs cmake-format -i
+
 configure: clean
     ./autogen.sh > autogen.log
     ./configure > config.log
